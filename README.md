@@ -24,7 +24,6 @@
 <h2 align='center'>Activity Graph 📈</h2>
 <p align="center">
  <img src="https://activity-graph.herokuapp.com/graph?username=prakhardubey2002&theme=react-dark&area=true&hide_border=true#gh-light-mode-only" width="100%">
- <img src="https://activity-graph.herokuapp.com/graph?username=prakhardubey2002&theme=dracula&area=true&hide_border=true#gh-dark-mode-only" width="100%">
 </p>
   
   
