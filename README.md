@@ -19,6 +19,18 @@
 
 <p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=prakhardubey2002&show_icons=true&locale=en&layout=compact" alt="prakhardubey2002" /></p>
 
+
+
+<h2 align='center'>Activity Graph 📈</h2>
+<p align="center">
+ <img src="https://activity-graph.herokuapp.com/graph?username=prakhardubey2002&theme=react-dark&area=true&hide_border=true#gh-light-mode-only" width="100%">
+ <img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=dracula&area=true&hide_border=true#gh-dark-mode-only" width="100%">
+</p>
+  
+  
+  
+
+
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=prakhardubey2002&show_icons=true&locale=en" alt="prakhardubey2002" /></p>
 
 <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=prakhardubey2002&" alt="prakhardubey2002" /></p>
