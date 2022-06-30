@@ -5,7 +5,7 @@
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=prakhardubey2002" alt="prakhardubey2002" /></a> </p>
 
-- 🌱 I’m currently learning **Javascript,C++,Reactjs,Tailwind CSS**
+- 🌱 I’m currently learning **Javascript,C++,Reactjs,Tailwind CSS,Rust,Solana**
 
 - 📫 How to reach me **prakhardubey2002@gmail.com**
 
