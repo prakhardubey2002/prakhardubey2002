@@ -21,9 +21,9 @@
 
 
 
-<p align="center">
+<!-- <p align="center">
  <img src="https://activity-graph.herokuapp.com/graph?username=prakhardubey2002&theme=react-dark&area=true&hide_border=true#gh-light-mode-only" width="100%">
-</p>
+</p> -->
   
   
   
