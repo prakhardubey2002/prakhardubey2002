@@ -3,7 +3,10 @@
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=prakhardubey2002&label=Profile%20views&color=0e75b6&style=flat" alt="prakhardubey2002" /> </p>
 
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=prakhardubey2002" alt="prakhardubey2002" /></a> </p>
+<!-- <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=prakhardubey2002" alt="prakhardubey2002" /></a> </p> -->
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=prakhardubey2002&show_icons=true&theme=radical&count_private=true&include_all_commits=true" alt="github stats for prakhardubey2002" width="50%"/>
+</p>
 
 
 
