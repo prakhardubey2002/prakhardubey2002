@@ -1,1 +1,1 @@
-![](https://github.com/user-attachments/assets/137b54a6-efb9-4f3f-9ded-cd12888c399e)
+<img src="https://github.com/user-attachments/assets/f7a8badf-1742-45b3-b985-bb3ed1856a82" alt="Prakhar Banner" width="100%" />
