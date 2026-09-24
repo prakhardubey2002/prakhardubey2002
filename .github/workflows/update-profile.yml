@@ -1,0 +1,56 @@
+name: Update dynamic profile
+
+on:
+  schedule:
+    # GitHub cron uses UTC. 19:30 UTC is 01:00 IST (nightly in India).
+    - cron: "30 19 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-dynamic-profile
+  cancel-in-progress: false
+
+env:
+  GITHUB_USERNAME: prakhardubey2002
+  NPM_USERNAME: prakhar_dubey
+  GITHUB_TOKEN: ${{ github.token }}
+
+jobs:
+  update:
+    name: Fetch telemetry and update README
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out profile repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate animated SVG and README data
+        run: python scripts/update_profile.py
+
+      - name: Validate generated files
+        run: |
+          python -c "import xml.etree.ElementTree as ET; ET.parse('assets/profile.svg')"
+          test -s README.md
+          test -s data/profile.json
+
+      - name: Commit changes when telemetry changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md assets/profile.svg data/profile.json
+          if git diff --cached --quiet; then
+            echo "Profile telemetry is already current."
+            exit 0
+          fi
+          git commit -m "chore(profile): refresh dynamic telemetry"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

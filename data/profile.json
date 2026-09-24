@@ -1,0 +1,100 @@
+{
+  "generated_at": "2026-09-24T08:01:39Z",
+  "github": {
+    "profile": {
+      "name": "Prakhar Dubey",
+      "bio": "SDE at @RecootyInc",
+      "company": "RecootyInc",
+      "location": "Indore India",
+      "blog": "https://linktr.ee/prakhardubey",
+      "avatar_url": "https://avatars.githubusercontent.com/u/80157067?v=4"
+    },
+    "repos": 124,
+    "stars": 13,
+    "followers": 34,
+    "following": 60,
+    "top_language": "JavaScript"
+  },
+  "npm": {
+    "username": "prakhar_dubey",
+    "profile_url": "https://www.npmjs.com/~prakhar_dubey",
+    "packages": [
+      {
+        "name": "preact-missing-hooks",
+        "version": "4.12.0",
+        "description": "A lightweight, extendable collection of missing React-like hooks for Preact — plus fresh, powerful new ones designed specifically for modern Preact apps.",
+        "monthly_downloads": 320,
+        "weekly_downloads": 108,
+        "url": "https://www.npmjs.com/package/preact-missing-hooks",
+        "yearly_downloads": 3539
+      },
+      {
+        "name": "@linksense/core",
+        "version": "1.1.0",
+        "description": "Framework-agnostic link/platform detection engine — detect, normalize, and extract data from 50+ platform URLs",
+        "monthly_downloads": 57,
+        "weekly_downloads": 7,
+        "url": "https://www.npmjs.com/package/@linksense/core",
+        "yearly_downloads": 695
+      },
+      {
+        "name": "@linksense/preact",
+        "version": "1.0.1",
+        "description": "Preact hooks for URL platform detection — useLinksense, useDetectAll, useNormalizeUrl, useExtractFromUrl",
+        "monthly_downloads": 49,
+        "weekly_downloads": 9,
+        "url": "https://www.npmjs.com/package/@linksense/preact",
+        "yearly_downloads": 690
+      },
+      {
+        "name": "@linksense/react",
+        "version": "1.0.1",
+        "description": "React hooks for URL platform detection — useLinkSense, useDetectAll, useNormalizeUrl, useExtractFromUrl",
+        "monthly_downloads": 44,
+        "weekly_downloads": 8,
+        "url": "https://www.npmjs.com/package/@linksense/react",
+        "yearly_downloads": 695
+      },
+      {
+        "name": "hayagriva-llm",
+        "version": "7.0.0",
+        "description": "Structured LLM metadata standard for Node.js packages — llm.package.json and llm.package.txt",
+        "monthly_downloads": 42,
+        "weekly_downloads": 12,
+        "url": "https://www.npmjs.com/package/hayagriva-llm",
+        "yearly_downloads": 1699
+      },
+      {
+        "name": "@linksense/vue",
+        "version": "1.0.1",
+        "description": "Vue composables for URL platform detection — useLinkSense, useDetectAll, useNormalizeUrl, useExtractFromUrl",
+        "monthly_downloads": 41,
+        "weekly_downloads": 7,
+        "url": "https://www.npmjs.com/package/@linksense/vue",
+        "yearly_downloads": 694
+      },
+      {
+        "name": "@linksense/angular",
+        "version": "1.0.1",
+        "description": "Angular service for URL platform detection — LinkSenseService powered by @linksense/core",
+        "monthly_downloads": 38,
+        "weekly_downloads": 6,
+        "url": "https://www.npmjs.com/package/@linksense/angular",
+        "yearly_downloads": 658
+      }
+    ],
+    "package_count": 7,
+    "monthly_downloads": 591,
+    "weekly_downloads": 157,
+    "yearly_downloads": 8670,
+    "top_package": {
+      "name": "preact-missing-hooks",
+      "version": "4.12.0",
+      "description": "A lightweight, extendable collection of missing React-like hooks for Preact — plus fresh, powerful new ones designed specifically for modern Preact apps.",
+      "monthly_downloads": 320,
+      "weekly_downloads": 108,
+      "url": "https://www.npmjs.com/package/preact-missing-hooks",
+      "yearly_downloads": 3539
+    }
+  }
+}
