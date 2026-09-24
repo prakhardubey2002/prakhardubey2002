@@ -16,7 +16,7 @@
 <!-- PROFILE_CARD:START -->
 <div align="center">
   <a href="https://github.com/prakhardubey2002">
-    <img src="https://raw.githubusercontent.com/prakhardubey2002/prakhardubey2002/main/assets/profile.svg?v=20260924T080139Z" width="100%" alt="Dynamic sci-fi profile card for Prakhar Dubey" />
+    <img src="https://raw.githubusercontent.com/prakhardubey2002/prakhardubey2002/main/assets/profile.svg?v=20260924T080139Z" width="100%" alt="Editorial résumé profile card for Prakhar Dubey" />
   </a>
 </div>
 

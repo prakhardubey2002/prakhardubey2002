@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Generate the profile README, JSON snapshot, and animated SVG telemetry card."""
+"""Generate the profile README, JSON snapshot, and editorial SVG résumé card."""
 
 from __future__ import annotations
 
+import base64
 import concurrent.futures
 import datetime as dt
 import html
@@ -22,6 +23,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = ROOT / "data" / "profile.json"
 TEMPLATE_PATH = ROOT / "templates" / "profile.svg"
 SVG_PATH = ROOT / "assets" / "profile.svg"
+AVATAR_PATH = ROOT / "assets" / "avatar.jpg"
 README_PATH = ROOT / "README.md"
 
 GITHUB_USER = os.getenv("GITHUB_USERNAME", "prakhardubey2002").strip()
@@ -217,16 +219,18 @@ def format_number(value: Any) -> str:
         return "0"
 
 
-def compact_text(value: str, max_chars: int) -> str:
-    value = " ".join(value.split())
-    if len(value) <= max_chars:
-        return value
-    return value[: max_chars - 1].rstrip() + "…"
-
-
 def initials(name: str) -> str:
     words = [word for word in re.findall(r"[A-Za-z0-9]+", name) if word]
     return "".join(word[0] for word in words[:2]).upper() or "PD"
+
+
+def avatar_data_uri() -> str:
+    """Embed the local portrait so the card renders in GitHub's SVG sandbox."""
+    try:
+        encoded = base64.b64encode(AVATAR_PATH.read_bytes()).decode("ascii")
+        return f"data:image/jpeg;base64,{encoded}"
+    except OSError:
+        return ""
 
 
 def atomic_write(path: Path, content: str) -> None:
@@ -236,76 +240,32 @@ def atomic_write(path: Path, content: str) -> None:
     temporary.replace(path)
 
 
-def render_package_pills(packages: list[dict[str, Any]]) -> str:
-    visible = packages[:8]
-    if not visible:
-        return (
-            '<g transform="translate(56 544)">'
-            '<rect width="260" height="34" rx="8" fill="#081426" stroke="#1f4964"/>'
-            '<text x="14" y="22" class="pkg-name">NO PACKAGES DETECTED</text>'
-            "</g>"
-        )
-
-    pills: list[str] = []
-    for index, package in enumerate(visible):
-        column = index % 4
-        row = index // 4
-        x = 56 + column * 276
-        y = 544 + row * 40
-        name = compact_text(package["name"], 25)
-        version = compact_text(package["version"], 12)
-        title = compact_text(f"{package['name']} {package['version']}: {package['description']}", 100)
-        pills.append(
-            f'<g transform="translate({x} {y})">'
-            f"<title>{html.escape(title)}</title>"
-            '<rect width="260" height="34" rx="8" fill="#081426" stroke="#1c4560"/>'
-            '<rect width="3" height="34" rx="1.5" fill="#39f6ff"/>'
-            f'<text x="13" y="22" class="pkg-name">{html.escape(name)}</text>'
-            f'<text x="247" y="22" text-anchor="end" class="pkg-version">{html.escape(version)}</text>'
-            "</g>"
-        )
-    return "".join(pills)
-
-
 def render_svg(data: dict[str, Any]) -> str:
     template = TEMPLATE_PATH.read_text(encoding="utf-8")
     profile = data["github"]["profile"]
     npm = data["npm"]
-    packages = npm.get("packages", [])
-    top_package = npm.get("top_package") or {}
-    generated_at = data["generated_at"]
-    generated_dt = dt.datetime.fromisoformat(generated_at.replace("Z", "+00:00"))
+    location = profile["location"].replace(" India", ", India")
 
     values = {
-        "TITLE": f"Dynamic profile telemetry for {profile['name']}",
+        "TITLE": f"{profile['name']} — Software Engineer Résumé",
         "DESCRIPTION": (
-            f"{profile['name']} — {profile['bio']} "
+            f"{profile['name']} — {profile['bio']}. Based in {location}. "
+            "He specializes in AI-driven SaaS, backend systems, micro-frontends, "
+            "developer tooling, and cloud infrastructure. "
             f"GitHub: {format_number(data['github']['repos'])} public repositories, "
-            f"{format_number(data['github']['stars'])} stars and {format_number(data['github']['followers'])} followers. "
-            f"npm: {format_number(npm['package_count'])} packages, "
+            f"{format_number(data['github']['stars'])} stars and "
+            f"{format_number(data['github']['followers'])} followers. "
+            f"npm: {format_number(npm['package_count'])} packages and "
             f"{format_number(npm['yearly_downloads'])} downloads in the last year."
         ),
         "INITIALS": initials(profile["name"]),
-        "PROFILE_ID": f"GIT://{GITHUB_USER.upper()}",
-        "NAME": html.escape(profile["name"].upper()),
-        "BIO": html.escape(compact_text(profile["bio"], 66)),
-        "META": html.escape(f"{profile['company']} // {profile['location']}"),
+        "NAME": html.escape(profile["name"]),
+        "LOCATION": html.escape(location),
         "REPOS": format_number(data["github"]["repos"]),
         "STARS": format_number(data["github"]["stars"]),
-        "FOLLOWERS": format_number(data["github"]["followers"]),
-        "TOP_LANGUAGE": html.escape(data["github"]["top_language"]),
         "PACKAGE_COUNT": format_number(npm["package_count"]),
         "YEARLY_DOWNLOADS": format_number(npm["yearly_downloads"]),
-        "MONTHLY_DOWNLOADS": format_number(npm["monthly_downloads"]),
-        "WEEKLY_DOWNLOADS": format_number(npm["weekly_downloads"]),
-        "TOP_PACKAGE": html.escape(compact_text(top_package.get("name", "—"), 22)),
-        "TOP_PACKAGE_NOTE": html.escape(
-            f"{format_number(top_package.get('monthly_downloads', 0))}/MO · {compact_text(top_package.get('version', '—'), 12)}"
-        ),
-        "PACKAGE_PROFILE": html.escape(NPM_USER),
-        "GENERATED_DISPLAY": html.escape(generated_dt.strftime("%d %b %Y · %H:%M UTC").upper()),
-        "GENERATED_ISO": html.escape(generated_at),
-        "PACKAGE_PILLS": render_package_pills(packages),
+        "AVATAR_DATA_URI": avatar_data_uri(),
     }
 
     rendered = template
@@ -331,7 +291,7 @@ def render_readme(data: dict[str, Any]) -> str:
     section = f"""{README_START}
 <div align="center">
   <a href="https://github.com/{GITHUB_USER}">
-    <img src="{raw_svg}" width="100%" alt="Dynamic sci-fi profile card for {html.escape(profile['name'])}" />
+    <img src="{raw_svg}" width="100%" alt="Editorial résumé profile card for {html.escape(profile['name'])}" />
   </a>
 </div>
 

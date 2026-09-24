@@ -1,245 +1,308 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="profile-title profile-description">
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1050" viewBox="0 0 900 1050" role="img" aria-labelledby="profile-title profile-description">
   <title id="profile-title">{{TITLE}}</title>
   <desc id="profile-description">{{DESCRIPTION}}</desc>
 
   <defs>
-    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#050914"/>
-      <stop offset="0.52" stop-color="#07111f"/>
-      <stop offset="1" stop-color="#09051a"/>
-    </linearGradient>
-    <radialGradient id="cyan-haze" cx="0.12" cy="0.06" r="0.8">
-      <stop offset="0" stop-color="#0ee9ff" stop-opacity="0.16"/>
-      <stop offset="0.5" stop-color="#0ee9ff" stop-opacity="0.025"/>
-      <stop offset="1" stop-color="#0ee9ff" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="violet-haze" cx="0.92" cy="0.9" r="0.7">
-      <stop offset="0" stop-color="#9b5cff" stop-opacity="0.17"/>
-      <stop offset="0.55" stop-color="#9b5cff" stop-opacity="0.025"/>
-      <stop offset="1" stop-color="#9b5cff" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#39f6ff"/>
-      <stop offset="0.5" stop-color="#6d8cff"/>
-      <stop offset="1" stop-color="#bd65ff"/>
-    </linearGradient>
-    <linearGradient id="accent-soft" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#39f6ff" stop-opacity="0.95"/>
-      <stop offset="1" stop-color="#bd65ff" stop-opacity="0.75"/>
-    </linearGradient>
-    <linearGradient id="card-fill" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#0b1b2e" stop-opacity="0.93"/>
-      <stop offset="1" stop-color="#07101e" stop-opacity="0.93"/>
-    </linearGradient>
-    <linearGradient id="scan-fill" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#39f6ff" stop-opacity="0"/>
-      <stop offset="0.82" stop-color="#39f6ff" stop-opacity="0.025"/>
-      <stop offset="1" stop-color="#39f6ff" stop-opacity="0.12"/>
-    </linearGradient>
-    <linearGradient id="edge-fade" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#39f6ff" stop-opacity="0.8"/>
-      <stop offset="0.16" stop-color="#39f6ff" stop-opacity="0"/>
-      <stop offset="0.84" stop-color="#bd65ff" stop-opacity="0"/>
-      <stop offset="1" stop-color="#bd65ff" stop-opacity="0.8"/>
-    </linearGradient>
-    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
-      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#43d9ff" stroke-opacity="0.09" stroke-width="1"/>
-      <circle cx="0" cy="0" r="1.2" fill="#65f7ff" fill-opacity="0.22"/>
-    </pattern>
-    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
-      <feGaussianBlur stdDeviation="5" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    <filter id="soft-glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="16"/>
-    </filter>
-    <clipPath id="panel-clip">
-      <rect x="20" y="20" width="1160" height="640" rx="24"/>
+    <clipPath id="portrait-clip">
+      <circle cx="145" cy="194" r="82"/>
     </clipPath>
+    <filter id="portrait-monochrome" x="-10%" y="-10%" width="120%" height="120%">
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.08" intercept="-0.04"/>
+        <feFuncG type="linear" slope="1.08" intercept="-0.04"/>
+        <feFuncB type="linear" slope="1.08" intercept="-0.04"/>
+      </feComponentTransfer>
+    </filter>
   </defs>
 
   <style>
-    text { font-family: Inter, "Segoe UI", system-ui, -apple-system, sans-serif; }
-    .code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace; letter-spacing: 1.6px; }
-    .pkg-name { fill: #dcecf5; font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace; font-size: 11.5px; }
-    .pkg-version { fill: #7f9bad; font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace; font-size: 10px; }
-    .grid { animation: grid-drift 18s linear infinite; }
-    .scan-beam { animation: scan 7s cubic-bezier(.45,0,.55,1) infinite; }
-    .orbit-a { transform-origin: 104px 130px; animation: orbit 13s linear infinite; }
-    .orbit-b { transform-origin: 104px 130px; animation: orbit-reverse 9s linear infinite; }
-    .core-pulse { transform-origin: 104px 130px; animation: core-pulse 2.8s ease-in-out infinite; }
-    .status-pulse { transform-origin: 954px 48px; animation: status-pulse 1.8s ease-in-out infinite; }
-    .signal-dash { animation: signal-dash 2.8s linear infinite; }
-    .signal-dash.slow { animation-duration: 5.4s; animation-direction: reverse; }
-    .packet { animation: packet 3.4s ease-in-out infinite; }
-    .packet.delay-one { animation-delay: -0.85s; }
-    .packet.delay-two { animation-delay: -1.7s; }
-    .packet.delay-three { animation-delay: -2.55s; }
-    .value-in { animation: value-in 0.75s ease-out both; }
-    .value-in.delay { animation-delay: 0.12s; }
-    .value-in.delay-two { animation-delay: 0.24s; }
-    .value-in.delay-three { animation-delay: 0.36s; }
-    @keyframes grid-drift { to { transform: translate(32px, 32px); } }
-    @keyframes scan { 0% { transform: translateY(-90px); opacity: 0; } 12% { opacity: 1; } 88% { opacity: 1; } 100% { transform: translateY(680px); opacity: 0; } }
-    @keyframes orbit { to { transform: rotate(360deg); } }
-    @keyframes orbit-reverse { to { transform: rotate(-360deg); } }
-    @keyframes core-pulse { 0%, 100% { opacity: .45; transform: scale(.94); } 50% { opacity: 1; transform: scale(1.08); } }
-    @keyframes status-pulse { 0%, 100% { opacity: .35; } 50% { opacity: 1; } }
-    @keyframes signal-dash { to { stroke-dashoffset: -72; } }
-    @keyframes packet { 0%, 100% { opacity: .25; } 50% { opacity: 1; } }
-    @keyframes value-in { from { opacity: .45; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }
-    @media (prefers-reduced-motion: reduce) {
-      .grid, .scan-beam, .orbit-a, .orbit-b, .core-pulse, .status-pulse,
-      .signal-dash, .packet, .value-in { animation: none !important; }
-    }
+    text { font-family: Arial, Helvetica, sans-serif; fill: #090909; }
+    .headline { font-size: 29px; font-weight: 400; letter-spacing: -0.9px; }
+    .headline-accent { font-size: 29px; font-weight: 800; font-style: italic; letter-spacing: -0.9px; }
+    .section { font-size: 16px; font-weight: 700; letter-spacing: 0.2px; }
+    .name { font-size: 15px; font-weight: 700; }
+    .role { font-size: 10px; font-weight: 700; }
+    .body { font-size: 9.6px; }
+    .body-small { font-size: 8.8px; }
+    .muted { fill: #606060; }
+    .faint { fill: #8a8a8a; }
+    .label { font-size: 8.4px; font-weight: 700; }
+    .value { font-size: 8.4px; font-weight: 700; text-anchor: end; }
+    .entry { font-size: 11px; font-weight: 700; }
+    .date { font-size: 8.3px; font-weight: 700; text-anchor: end; }
+    .category { font-size: 8.5px; font-weight: 700; }
+    .metric { font-size: 20px; font-weight: 700; }
+    .metric-label { font-size: 7.5px; font-weight: 700; }
+    .tag { font-size: 7.5px; font-weight: 700; letter-spacing: 0.25px; }
+    .inverse { fill: #ffffff; }
+    .rule-heavy { stroke: #090909; stroke-width: 2.4; }
+    .rule { stroke: #090909; stroke-width: 1; }
+    .rule-soft { stroke: #d3d3d3; stroke-width: 0.8; }
   </style>
 
-  <rect width="1200" height="680" fill="#02050b"/>
-  <rect x="20" y="20" width="1160" height="640" rx="24" fill="url(#background)" stroke="url(#edge-fade)" stroke-width="1.5"/>
-  <rect x="20" y="20" width="1160" height="640" rx="24" fill="url(#cyan-haze)"/>
-  <rect x="20" y="20" width="1160" height="640" rx="24" fill="url(#violet-haze)"/>
+  <rect width="900" height="1050" fill="#ffffff"/>
 
-  <g clip-path="url(#panel-clip)">
-    <rect class="grid" x="20" y="20" width="1200" height="640" fill="url(#grid)"/>
-    <circle cx="110" cy="118" r="140" fill="#24e9ff" opacity="0.055" filter="url(#soft-glow)"/>
-    <circle cx="1090" cy="588" r="180" fill="#a855f7" opacity="0.07" filter="url(#soft-glow)"/>
-    <g fill="#91f8ff">
-      <circle class="packet" cx="370" cy="82" r="1.6"/>
-      <circle class="packet delay-one" cx="630" cy="196" r="1.3"/>
-      <circle class="packet delay-two" cx="914" cy="105" r="1.5"/>
-      <circle class="packet delay-three" cx="1052" cy="233" r="1.2"/>
-      <circle class="packet delay-one" cx="476" cy="473" r="1.2"/>
-      <circle class="packet delay-two" cx="1110" cy="451" r="1.6"/>
-    </g>
-    <g class="scan-beam">
-      <rect x="21" y="0" width="1158" height="78" fill="url(#scan-fill)"/>
-      <path d="M22 78 H1178" stroke="#48f4ff" stroke-opacity="0.28"/>
-    </g>
-    <path d="M20 224 H1180" stroke="#244258" stroke-width="1"/>
-    <path d="M56 224 H268" stroke="#39f6ff" stroke-width="2" filter="url(#glow)"/>
-    <path d="M1030 224 H1144" stroke="#b965ff" stroke-width="2" filter="url(#glow)"/>
+  <!-- Editorial masthead -->
+  <g aria-label="Profile headline">
+    <text x="28" y="48" class="headline">SOFTWARE ENGINEER</text>
+    <text x="28" y="82" class="headline">PASSION, AI &amp;</text>
+    <text x="224" y="82" class="headline-accent">EXPERIENCE.</text>
+    <path d="M225 89 H411" class="rule-heavy"/>
+
+    <a href="https://github.com/prakhardubey2002" target="_blank" aria-label="GitHub">
+      <circle cx="790" cy="57" r="13" fill="#ffffff" stroke="#c8c8c8"/>
+      <text x="790" y="60" text-anchor="middle" font-size="7.5" font-weight="700">GH</text>
+    </a>
+    <a href="https://www.npmjs.com/~prakhar_dubey" target="_blank" aria-label="npm">
+      <circle cx="831" cy="57" r="13" fill="#ffffff" stroke="#c8c8c8"/>
+      <text x="831" y="60" text-anchor="middle" font-size="6.4" font-weight="700">NPM</text>
+    </a>
+    <a href="https://linktr.ee/prakhardubey" target="_blank" aria-label="Portfolio links">
+      <circle cx="872" cy="57" r="13" fill="#ffffff" stroke="#c8c8c8"/>
+      <path d="M867 60 L877 50 M870 50 H877 V57" fill="none" stroke="#090909" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </a>
   </g>
 
-  <!-- Top telemetry rail -->
-  <text x="56" y="51" class="code" font-size="12" fill="#6f8ba1">SYS // PROFILE_01</text>
-  <text x="1144" y="51" text-anchor="end" class="code" font-size="11" fill="#71879b">DATA STREAM / ENCRYPTED</text>
-  <circle class="status-pulse" cx="954" cy="48" r="3.5" fill="#5dff9a" filter="url(#glow)"/>
-  <rect x="874" y="34" width="68" height="28" rx="14" fill="#0b2a24" stroke="#1d6c4c"/>
-  <text x="908" y="53" text-anchor="middle" class="code" font-size="10" fill="#75ffb0">ONLINE</text>
+  <!-- Left profile column -->
+  <g aria-label="Profile and contact details">
+    <circle cx="145" cy="194" r="82" fill="#efefef"/>
+    <text x="145" y="205" text-anchor="middle" font-size="38" font-weight="700" fill="#9a9a9a">{{INITIALS}}</text>
+    <image href="{{AVATAR_DATA_URI}}" x="54" y="99" width="182" height="210" preserveAspectRatio="xMidYMid slice" clip-path="url(#portrait-clip)" filter="url(#portrait-monochrome)"/>
+    <circle cx="145" cy="194" r="82" fill="none" stroke="#d0d0d0"/>
 
-  <!-- Identity module -->
-  <g>
-    <circle cx="104" cy="130" r="48" fill="#071421" stroke="#1d5468" stroke-width="2"/>
-    <circle class="core-pulse" cx="104" cy="130" r="41" fill="none" stroke="#39f6ff" stroke-opacity="0.25" stroke-width="5" filter="url(#glow)"/>
-    <circle class="orbit-a" cx="104" cy="130" r="55" fill="none" stroke="#39f6ff" stroke-width="2" stroke-dasharray="9 12"/>
-    <circle class="orbit-b" cx="104" cy="130" r="46" fill="none" stroke="#b965ff" stroke-width="1.5" stroke-dasharray="3 8"/>
-    <path d="M104 78 L145 103 V153 L104 178 L63 153 V103 Z" fill="url(#accent-soft)" opacity="0.1" stroke="#47eaff" stroke-opacity="0.45"/>
-    <text x="104" y="143" text-anchor="middle" font-size="38" font-weight="800" letter-spacing="2" fill="#e8fdff">{{INITIALS}}</text>
-    <text x="190" y="91" class="code" font-size="11" fill="#6edff0">{{PROFILE_ID}}</text>
-    <text x="190" y="132" font-size="39" font-weight="800" letter-spacing="0.4" fill="#f2fbff">{{NAME}}</text>
-    <text x="190" y="166" font-size="17" fill="#a9bfce">{{BIO}}</text>
-    <text x="190" y="199" class="code" font-size="11" fill="#59ddeb">{{META}}</text>
-    <path class="signal-dash" d="M980 182 H1136" stroke="#3eefff" stroke-width="2" stroke-dasharray="18 8" opacity="0.7"/>
-    <circle cx="1128" cy="182" r="4" fill="#5fffb0" filter="url(#glow)"/>
-  </g>
+    <text x="28" y="302" class="name">{{NAME}}</text>
+    <text x="28" y="320" class="role">SOFTWARE DEVELOPMENT ENGINEER</text>
 
-  <!-- GitHub and npm metric cards -->
-  <g>
-    <!-- Public repositories -->
-    <g>
-      <rect x="56" y="250" width="260" height="104" rx="12" fill="url(#card-fill)" stroke="#1c4055"/>
-      <path d="M56 262 Q56 250 68 250 H95" fill="none" stroke="#39f6ff" stroke-width="2"/>
-      <text x="74" y="276" class="code" font-size="10" fill="#718da1">PUBLIC REPOS</text>
-      <text x="74" y="321" class="value-in" font-size="36" font-weight="800" fill="#f2fcff">{{REPOS}}</text>
-      <text x="74" y="343" class="code" font-size="9" fill="#59768a">GITHUB // PUBLIC</text>
-      <rect x="56" y="352" width="224" height="2" fill="#102c3e"><animate attributeName="width" from="0" to="224" dur="1.2s" fill="freeze"/></rect>
-    </g>
-    <!-- Total stars -->
-    <g>
-      <rect x="332" y="250" width="260" height="104" rx="12" fill="url(#card-fill)" stroke="#1c4055"/>
-      <path d="M332 262 Q332 250 344 250 H371" fill="none" stroke="#39f6ff" stroke-width="2"/>
-      <text x="350" y="276" class="code" font-size="10" fill="#718da1">TOTAL STARS</text>
-      <text x="350" y="321" class="value-in delay" font-size="36" font-weight="800" fill="#f2fcff">{{STARS}}</text>
-      <text x="350" y="343" class="code" font-size="9" fill="#59768a">ACROSS ALL REPOS</text>
-      <rect x="332" y="352" width="224" height="2" fill="#102c3e"><animate attributeName="width" from="0" to="224" dur="1.2s" begin="0.1s" fill="freeze"/></rect>
-    </g>
-    <!-- Followers -->
-    <g>
-      <rect x="608" y="250" width="260" height="104" rx="12" fill="url(#card-fill)" stroke="#1c4055"/>
-      <path d="M608 262 Q608 250 620 250 H647" fill="none" stroke="#39f6ff" stroke-width="2"/>
-      <text x="626" y="276" class="code" font-size="10" fill="#718da1">FOLLOWERS</text>
-      <text x="626" y="321" class="value-in delay-two" font-size="36" font-weight="800" fill="#f2fcff">{{FOLLOWERS}}</text>
-      <text x="626" y="343" class="code" font-size="9" fill="#59768a">NETWORK // GROWING</text>
-      <rect x="608" y="352" width="224" height="2" fill="#102c3e"><animate attributeName="width" from="0" to="224" dur="1.2s" begin="0.2s" fill="freeze"/></rect>
-    </g>
-    <!-- Package count -->
-    <g>
-      <rect x="884" y="250" width="260" height="104" rx="12" fill="url(#card-fill)" stroke="#24455d"/>
-      <path d="M884 262 Q884 250 896 250 H923" fill="none" stroke="#b965ff" stroke-width="2"/>
-      <text x="902" y="276" class="code" font-size="10" fill="#8b82a7">NPM PACKAGES</text>
-      <text x="902" y="321" class="value-in delay-three" font-size="36" font-weight="800" fill="#f8f3ff">{{PACKAGE_COUNT}}</text>
-      <text x="902" y="343" class="code" font-size="9" fill="#796b92">@{{PACKAGE_PROFILE}}</text>
-      <rect x="884" y="352" width="224" height="2" fill="#1e1731"><animate attributeName="width" from="0" to="224" dur="1.2s" begin="0.3s" fill="freeze"/></rect>
-    </g>
+    <text x="28" y="351" class="body muted">
+      <tspan x="28" dy="0">Software Development Engineer with</tspan>
+      <tspan x="28" dy="17">2+ years building scalable SaaS,</tspan>
+      <tspan x="28" dy="17">AI-powered modules, and micro-</tspan>
+      <tspan x="28" dy="17">frontend systems.</tspan>
+    </text>
 
-    <!-- Yearly downloads -->
-    <g>
-      <rect x="56" y="370" width="260" height="104" rx="12" fill="url(#card-fill)" stroke="#24455d"/>
-      <path d="M56 382 Q56 370 68 370 H95" fill="none" stroke="#b965ff" stroke-width="2"/>
-      <text x="74" y="396" class="code" font-size="10" fill="#8b82a7">TOTAL DOWNLOADS</text>
-      <text x="74" y="441" class="value-in" font-size="36" font-weight="800" fill="#f8f3ff">{{YEARLY_DOWNLOADS}}</text>
-      <text x="74" y="463" class="code" font-size="9" fill="#796b92">ROLLING 12 MONTHS</text>
-      <rect x="56" y="472" width="224" height="2" fill="#1e1731"><animate attributeName="width" from="0" to="224" dur="1.2s" begin="0.4s" fill="freeze"/></rect>
+    <path d="M28 435 H260 M28 462 H260 M28 489 H260 M28 516 H260 M28 543 H260" class="rule"/>
+    <text x="28" y="456" class="label">PROFESSION</text>
+    <text x="260" y="456" class="value">SOFTWARE ENGINEER</text>
+    <text x="28" y="483" class="label">LOCATION</text>
+    <text x="260" y="483" class="value">{{LOCATION}}</text>
+    <text x="28" y="510" class="label">EMAIL</text>
+    <text x="260" y="510" class="value">prakhardubey2002@gmail.com</text>
+    <text x="28" y="537" class="label">EDUCATION</text>
+    <text x="260" y="537" class="value">B.TECH · CSE</text>
+
+    <text x="28" y="576" font-size="11" font-weight="700">OPEN SOURCE</text>
+    <path d="M28 582 H260" class="rule"/>
+    <text x="28" y="612" class="metric">{{REPOS}}</text>
+    <text x="28" y="625" class="metric-label muted">PUBLIC REPOS</text>
+    <text x="153" y="612" class="metric">{{PACKAGE_COUNT}}</text>
+    <text x="153" y="625" class="metric-label muted">NPM PACKAGES</text>
+    <text x="28" y="663" class="metric">{{STARS}}</text>
+    <text x="28" y="676" class="metric-label muted">GITHUB STARS</text>
+    <text x="153" y="663" class="metric">{{YEARLY_DOWNLOADS}}</text>
+    <text x="153" y="676" class="metric-label muted">ANNUAL DOWNLOADS</text>
+
+    <a href="https://github.com/prakhardubey2002" target="_blank">
+      <rect x="28" y="700" width="232" height="30" fill="#ffffff" stroke="#090909"/>
+      <text x="144" y="719" text-anchor="middle" font-size="8.5" font-weight="700">VIEW GITHUB ↗</text>
+    </a>
+    <a href="https://www.npmjs.com/~prakhar_dubey" target="_blank">
+      <rect x="28" y="738" width="112" height="28" fill="#ffffff" stroke="#090909"/>
+      <text x="84" y="756" text-anchor="middle" font-size="7.8" font-weight="700">NPM PROFILE</text>
+    </a>
+    <a href="https://linktr.ee/prakhardubey" target="_blank">
+      <rect x="148" y="738" width="112" height="28" fill="#ffffff" stroke="#090909"/>
+      <text x="204" y="756" text-anchor="middle" font-size="7.8" font-weight="700">ALL LINKS</text>
+    </a>
+
+    <text x="28" y="808" font-size="11" font-weight="700">CURRENTLY</text>
+    <path d="M28 814 H260" class="rule"/>
+    <text x="28" y="837" class="body muted">
+      <tspan x="28" dy="0">Building AI-powered HR and developer</tspan>
+      <tspan x="28" dy="16">tools, with a focus on reliable systems</tspan>
+      <tspan x="28" dy="16">and thoughtful product experiences.</tspan>
+    </text>
+    <g transform="translate(28 890)">
+      <rect width="74" height="23" rx="11.5" fill="#ffffff" stroke="#cfcfcf"/>
+      <text x="37" y="15" text-anchor="middle" class="tag">AI SYSTEMS</text>
     </g>
-    <!-- Monthly downloads -->
-    <g>
-      <rect x="332" y="370" width="260" height="104" rx="12" fill="url(#card-fill)" stroke="#24455d"/>
-      <path d="M332 382 Q332 370 344 370 H371" fill="none" stroke="#b965ff" stroke-width="2"/>
-      <text x="350" y="396" class="code" font-size="10" fill="#8b82a7">MONTHLY DOWNLOADS</text>
-      <text x="350" y="441" class="value-in delay" font-size="36" font-weight="800" fill="#f8f3ff">{{MONTHLY_DOWNLOADS}}</text>
-      <text x="350" y="463" class="code" font-size="9" fill="#796b92">NPM // 30 DAY WINDOW</text>
-      <rect x="332" y="472" width="224" height="2" fill="#1e1731"><animate attributeName="width" from="0" to="224" dur="1.2s" begin="0.5s" fill="freeze"/></rect>
+    <g transform="translate(108 890)">
+      <rect width="74" height="23" rx="11.5" fill="#ffffff" stroke="#cfcfcf"/>
+      <text x="37" y="15" text-anchor="middle" class="tag">FULL STACK</text>
     </g>
-    <!-- Weekly downloads -->
-    <g>
-      <rect x="608" y="370" width="260" height="104" rx="12" fill="url(#card-fill)" stroke="#24455d"/>
-      <path d="M608 382 Q608 370 620 370 H647" fill="none" stroke="#b965ff" stroke-width="2"/>
-      <text x="626" y="396" class="code" font-size="10" fill="#8b82a7">WEEKLY DOWNLOADS</text>
-      <text x="626" y="441" class="value-in delay-two" font-size="36" font-weight="800" fill="#f8f3ff">{{WEEKLY_DOWNLOADS}}</text>
-      <text x="626" y="463" class="code" font-size="9" fill="#796b92">NPM // 7 DAY WINDOW</text>
-      <rect x="608" y="472" width="224" height="2" fill="#1e1731"><animate attributeName="width" from="0" to="224" dur="1.2s" begin="0.6s" fill="freeze"/></rect>
+    <g transform="translate(28 920)">
+      <rect width="91" height="23" rx="11.5" fill="#ffffff" stroke="#cfcfcf"/>
+      <text x="45.5" y="15" text-anchor="middle" class="tag">OPEN SOURCE</text>
     </g>
-    <!-- Flagship package -->
-    <g>
-      <rect x="884" y="370" width="260" height="104" rx="12" fill="url(#card-fill)" stroke="#24455d"/>
-      <path d="M884 382 Q884 370 896 370 H923" fill="none" stroke="#b965ff" stroke-width="2"/>
-      <text x="902" y="396" class="code" font-size="10" fill="#8b82a7">FLAGSHIP PACKAGE</text>
-      <text x="902" y="433" class="value-in delay-three" font-size="18" font-weight="750" fill="#f8f3ff">{{TOP_PACKAGE}}</text>
-      <text x="902" y="463" class="code" font-size="9" fill="#796b92">{{TOP_PACKAGE_NOTE}}</text>
-      <rect x="884" y="472" width="224" height="2" fill="#1e1731"><animate attributeName="width" from="0" to="224" dur="1.2s" begin="0.7s" fill="freeze"/></rect>
+    <g transform="translate(125 920)">
+      <rect width="88" height="23" rx="11.5" fill="#ffffff" stroke="#cfcfcf"/>
+      <text x="44" y="15" text-anchor="middle" class="tag">PRODUCT UI</text>
     </g>
   </g>
 
-  <!-- Active package signal -->
-  <text x="56" y="519" class="code" font-size="10" fill="#7290a4">ACTIVE PACKAGE SIGNALS // TOP 8</text>
-  <text x="1144" y="519" text-anchor="end" class="code" font-size="9" fill="#587589">PRIMARY LANGUAGE // {{TOP_LANGUAGE}}</text>
-  {{PACKAGE_PILLS}}
+  <!-- Middle: experience, education, and skills -->
+  <g aria-label="Experience, education, and skills">
+    <text x="585" y="121" text-anchor="end" class="section">EXPERIENCE</text>
+    <path d="M285 132 H585 M285 136 H585" class="rule-heavy"/>
 
-  <!-- Footer -->
-  <path d="M56 626 H1144" stroke="#17384a"/>
-  <text x="56" y="646" class="code" font-size="9" fill="#587589">LAST SYNC // {{GENERATED_DISPLAY}}</text>
-  <g class="signal-dash slow">
-    <path d="M760 642 H850" stroke="url(#accent)" stroke-width="1.5" stroke-dasharray="5 9" opacity="0.75"/>
+    <text x="285" y="167" class="entry">Recooty</text>
+    <text x="585" y="167" class="date">MAR 2026 — PRESENT</text>
+    <text x="285" y="184" class="role">SOFTWARE DEVELOPMENT ENGINEER</text>
+    <text x="285" y="206" class="body muted">
+      <tspan x="285" dy="0">Building AI-driven HR workflows and modular</tspan>
+      <tspan x="285" dy="15">backend systems with NestJS, LangGraph, Azure</tspan>
+      <tspan x="285" dy="15">Foundry, OpenRouter, and cloud infrastructure.</tspan>
+    </text>
+    <path d="M285 254 H585" class="rule-soft"/>
+
+    <text x="285" y="281" class="entry">Recooty</text>
+    <text x="585" y="281" class="date">MAR 2025 — MAR 2026</text>
+    <text x="285" y="298" class="role">FRONTEND DEVELOPER</text>
+    <text x="285" y="320" class="body muted">
+      <tspan x="285" dy="0">Architected island-based SaaS frontend and plugin</tspan>
+      <tspan x="285" dy="15">systems; reduced bundle size by 24% and improved</tspan>
+      <tspan x="285" dy="15">CI/CD performance by approximately 30%.</tspan>
+    </text>
+    <path d="M285 368 H585" class="rule-soft"/>
+
+    <text x="285" y="395" class="entry">Recooty · NP Ventures</text>
+    <text x="585" y="395" class="date">JAN 2024 — FEB 2025</text>
+    <text x="285" y="412" class="role">FRONTEND DEVELOPER TRAINEE · CONTRACT</text>
+    <text x="285" y="434" class="body muted">
+      <tspan x="285" dy="0">Shipped production React features and 50+ Cypress</tspan>
+      <tspan x="285" dy="15">E2E tests; launched a Job Widget plugin via CDN.</tspan>
+    </text>
+    <path d="M285 467 H585" class="rule-soft"/>
+
+    <text x="585" y="505" text-anchor="end" class="section">EDUCATION</text>
+    <path d="M285 516 H585 M285 520 H585" class="rule-heavy"/>
+    <text x="285" y="551" class="entry">Gyan Ganga Institute of</text>
+    <text x="285" y="566" class="entry">Technology &amp; Sciences</text>
+    <rect x="469" y="539" width="116" height="21" rx="10.5" fill="#ffffff" stroke="#090909"/>
+    <text x="527" y="553" text-anchor="middle" font-size="7.5" font-weight="700">2020 — 2024</text>
+    <text x="285" y="588" class="role">B.TECH · COMPUTER SCIENCE ENGINEERING</text>
+    <text x="285" y="611" class="body muted">Cumulative GPA: 8.30 · Jabalpur, Madhya Pradesh</text>
+    <path d="M285 633 H585" class="rule-soft"/>
+
+    <text x="585" y="669" text-anchor="end" class="section">SKILLS</text>
+    <path d="M285 680 H585 M285 684 H585" class="rule-heavy"/>
+
+    <text x="285" y="711" class="category">LANGUAGES</text>
+    <text x="380" y="711" class="body">Python · C/C++ · JavaScript · TypeScript</text>
+    <path d="M285 724 H585" class="rule-soft"/>
+
+    <text x="285" y="750" class="category">AI / LLM</text>
+    <text x="380" y="750" class="body">
+      <tspan x="380" dy="0">LangChain · LangGraph · OpenRouter</tspan>
+      <tspan x="380" dy="14">Azure Foundry · AWS Bedrock</tspan>
+    </text>
+    <path d="M285 784 H585" class="rule-soft"/>
+
+    <text x="285" y="810" class="category">FRONTEND</text>
+    <text x="380" y="810" class="body">
+      <tspan x="380" dy="0">React / Next.js · Inertia · Preact</tspan>
+      <tspan x="380" dy="14">React Native · Tailwind · Zustand</tspan>
+    </text>
+    <path d="M285 844 H585" class="rule-soft"/>
+
+    <text x="285" y="870" class="category">BACKEND</text>
+    <text x="380" y="870" class="body">
+      <tspan x="380" dy="0">NestJS / Express · FastAPI · MongoDB</tspan>
+      <tspan x="380" dy="14">Redis · MySQL · Laravel</tspan>
+    </text>
+    <path d="M285 904 H585" class="rule-soft"/>
+
+    <text x="285" y="930" class="category">CLOUD / DEVOPS</text>
+    <text x="380" y="930" class="body">
+      <tspan x="380" dy="0">AWS · Vercel · GitHub Actions · GitLab</tspan>
+      <tspan x="380" dy="14">NGINX · Cloudflare Workers</tspan>
+    </text>
+    <path d="M285 964 H585" class="rule-soft"/>
+
+    <text x="285" y="990" class="category">TESTING</text>
+    <text x="380" y="990" class="body">Playwright · Cypress · Vitest · Puppeteer · Allure</text>
   </g>
-  <text x="1144" y="646" text-anchor="end" class="code" font-size="9" fill="#70899b">SIGNAL SECURE // {{GENERATED_ISO}}</text>
 
-  <!-- Sci-fi corner details -->
-  <path d="M20 48 V32 Q20 20 32 20 H49" fill="none" stroke="#4af3ff" stroke-width="2"/>
-  <path d="M1151 20 H1168 Q1180 20 1180 32 V49" fill="none" stroke="#b965ff" stroke-width="2"/>
-  <path d="M1180 631 V648 Q1180 660 1168 660 H1151" fill="none" stroke="#b965ff" stroke-width="2"/>
-  <path d="M49 660 H32 Q20 660 20 648 V631" fill="none" stroke="#4af3ff" stroke-width="2"/>
+  <!-- Right: awards, projects, and focus -->
+  <g aria-label="Awards, projects, and focus">
+    <text x="872" y="121" text-anchor="end" class="section">AWARDS</text>
+    <path d="M612 132 H872 M612 136 H872" class="rule-heavy"/>
+
+    <text x="612" y="168" class="entry">Smart India Hackathon 2022</text>
+    <text x="612" y="185" class="body muted">Winner · National Level</text>
+    <rect x="797" y="155" width="23" height="17" rx="8.5" fill="#090909"/>
+    <text x="808.5" y="167" text-anchor="middle" font-size="8" font-weight="700" class="inverse">1</text>
+    <path d="M612 203 H872" class="rule"/>
+
+    <text x="612" y="231" class="entry">Trident Hack 2023</text>
+    <text x="612" y="248" class="body muted">3rd Prize · North Zone</text>
+    <rect x="797" y="218" width="23" height="17" rx="8.5" fill="#090909"/>
+    <text x="808.5" y="230" text-anchor="middle" font-size="8" font-weight="700" class="inverse">3</text>
+    <path d="M612 266 H872" class="rule"/>
+
+    <text x="612" y="294" class="entry">RNTU Hackathon</text>
+    <text x="612" y="311" class="body muted">Hackathon Mentor &amp; Technical Jury</text>
+    <text x="612" y="327" class="body-small muted">2025 · 2026</text>
+    <path d="M612 345 H872" class="rule-soft"/>
+
+    <text x="872" y="376" text-anchor="end" class="section">PROJECTS</text>
+    <path d="M612 387 H872 M612 391 H872" class="rule-heavy"/>
+
+    <text x="612" y="429" class="entry">ApplyBetter</text>
+    <text x="612" y="445" font-size="8.2" font-weight="700">AI JOB MATCHING</text>
+    <text x="612" y="467" class="body muted">
+      <tspan x="612" dy="0">Multi-agent resume analysis and</tspan>
+      <tspan x="612" dy="15">personalized job recommendations.</tspan>
+    </text>
+    <path d="M612 506 H872" class="rule-soft"/>
+
+    <text x="612" y="536" class="entry">AI Salary Estimator</text>
+    <text x="612" y="552" font-size="8.2" font-weight="700">GLOBAL COMPENSATION TOOL</text>
+    <text x="612" y="574" class="body muted">
+      <tspan x="612" dy="0">Real-time salary insights with an</tspan>
+      <tspan x="612" dy="15">offline-first, globally available stack.</tspan>
+    </text>
+    <path d="M612 613 H872" class="rule-soft"/>
+
+    <text x="612" y="643" class="entry">Preact Missing Hooks</text>
+    <text x="612" y="659" font-size="8.2" font-weight="700">OPEN SOURCE · PREACT</text>
+    <text x="612" y="681" class="body muted">
+      <tspan x="612" dy="0">Tree-shakable React-compatible hooks</tspan>
+      <tspan x="612" dy="15">with tests and automated releases.</tspan>
+    </text>
+    <path d="M612 720 H872" class="rule-soft"/>
+
+    <text x="612" y="750" class="entry">Hayagriva LLM</text>
+    <text x="612" y="766" font-size="8.2" font-weight="700">OPEN SOURCE · TYPESCRIPT</text>
+    <text x="612" y="788" class="body muted">
+      <tspan x="612" dy="0">LLM-ready metadata generation for</tspan>
+      <tspan x="612" dy="15">the npm ecosystem.</tspan>
+    </text>
+    <path d="M612 827 H872" class="rule-soft"/>
+
+    <text x="872" y="858" text-anchor="end" class="section">FOCUS</text>
+    <path d="M612 869 H872 M612 873 H872" class="rule-heavy"/>
+    <text x="612" y="899" class="body muted">
+      <tspan x="612" dy="0">AI agents, resilient SaaS architecture,</tspan>
+      <tspan x="612" dy="15">micro-frontends, and tools that make</tspan>
+      <tspan x="612" dy="15">software development more effective.</tspan>
+    </text>
+    <g transform="translate(612 960)">
+      <rect width="78" height="23" rx="11.5" fill="#ffffff" stroke="#cfcfcf"/>
+      <text x="39" y="15" text-anchor="middle" class="tag">AI AGENTS</text>
+    </g>
+    <g transform="translate(696 960)">
+      <rect width="79" height="23" rx="11.5" fill="#ffffff" stroke="#cfcfcf"/>
+      <text x="39.5" y="15" text-anchor="middle" class="tag">SAAS</text>
+    </g>
+    <g transform="translate(781 960)">
+      <rect width="91" height="23" rx="11.5" fill="#ffffff" stroke="#cfcfcf"/>
+      <text x="45.5" y="15" text-anchor="middle" class="tag">DEV TOOLS</text>
+    </g>
+  </g>
+
+  <path d="M28 1018 H872" class="rule"/>
+  <text x="28" y="1037" font-size="7.5" font-weight="700" letter-spacing="0.4">PRAKHAR DUBEY · PORTFOLIO PROFILE</text>
+  <text x="872" y="1037" text-anchor="end" font-size="7.5" font-weight="700" letter-spacing="0.4">GITHUB · NPM · LINKS</text>
 </svg>
