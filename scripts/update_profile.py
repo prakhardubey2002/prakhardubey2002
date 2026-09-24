@@ -279,43 +279,18 @@ def render_svg(data: dict[str, Any]) -> str:
 
 def render_readme(data: dict[str, Any]) -> str:
     profile = data["github"]["profile"]
-    npm = data["npm"]
     generated_at = data["generated_at"]
     cache_key = re.sub(r"[^0-9A-Za-z]", "", generated_at)
     raw_svg = (
         f"https://raw.githubusercontent.com/{GITHUB_USER}/{GITHUB_USER}/main/assets/profile.svg"
         f"?v={cache_key}"
     )
-    npm_url = npm.get("profile_url", f"https://www.npmjs.com/~{NPM_USER}")
-    blog = profile.get("blog") or f"https://linktr.ee/{GITHUB_USER}"
-    section = f"""{README_START}
-<div align="center">
-  <a href="https://github.com/{GITHUB_USER}">
-    <img src="{raw_svg}" width="100%" alt="Editorial résumé profile card for {html.escape(profile['name'])}" />
-  </a>
-</div>
-
-<div align="center">
-
-| GitHub telemetry | npm telemetry |
-|:---:|---:|
-| **Public repositories:** {format_number(data['github']['repos'])} | **Packages:** {format_number(npm['package_count'])} |
-| **Total stars:** {format_number(data['github']['stars'])} | **Downloads / 12 months:** {format_number(npm['yearly_downloads'])} |
-| **Followers:** {format_number(data['github']['followers'])} | **Monthly downloads:** {format_number(npm['monthly_downloads'])} |
-
-[GitHub](https://github.com/{GITHUB_USER}) · [npm]({npm_url}) · [Links]({blog}) · Updated `{generated_at}`
-
-</div>
-{README_END}"""
-
-    current = README_PATH.read_text(encoding="utf-8") if README_PATH.exists() else ""
-    if README_START in current and README_END in current:
-        pattern = re.compile(
-            rf"{re.escape(README_START)}.*?{re.escape(README_END)}",
-            flags=re.DOTALL,
-        )
-        return pattern.sub(section, current, count=1).rstrip() + "\n"
-    return current.rstrip() + "\n\n" + section + "\n"
+    return f"""{README_START}
+<a href="https://github.com/{GITHUB_USER}">
+  <img src="{raw_svg}" width="100%" alt="Editorial résumé profile card for {html.escape(profile['name'])}" />
+</a>
+{README_END}
+"""
 
 
 def main() -> None:
