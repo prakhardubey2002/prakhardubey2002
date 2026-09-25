@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-24T08:01:39Z",
+  "generated_at": "2026-09-25T22:33:03Z",
   "github": {
     "profile": {
       "name": "Prakhar Dubey",
@@ -26,34 +26,16 @@
         "monthly_downloads": 320,
         "weekly_downloads": 108,
         "url": "https://www.npmjs.com/package/preact-missing-hooks",
-        "yearly_downloads": 3539
+        "yearly_downloads": 3563
       },
       {
         "name": "@linksense/core",
         "version": "1.1.0",
         "description": "Framework-agnostic link/platform detection engine — detect, normalize, and extract data from 50+ platform URLs",
-        "monthly_downloads": 57,
-        "weekly_downloads": 7,
+        "monthly_downloads": 42,
+        "weekly_downloads": 2,
         "url": "https://www.npmjs.com/package/@linksense/core",
-        "yearly_downloads": 695
-      },
-      {
-        "name": "@linksense/preact",
-        "version": "1.0.1",
-        "description": "Preact hooks for URL platform detection — useLinksense, useDetectAll, useNormalizeUrl, useExtractFromUrl",
-        "monthly_downloads": 49,
-        "weekly_downloads": 9,
-        "url": "https://www.npmjs.com/package/@linksense/preact",
-        "yearly_downloads": 690
-      },
-      {
-        "name": "@linksense/react",
-        "version": "1.0.1",
-        "description": "React hooks for URL platform detection — useLinkSense, useDetectAll, useNormalizeUrl, useExtractFromUrl",
-        "monthly_downloads": 44,
-        "weekly_downloads": 8,
-        "url": "https://www.npmjs.com/package/@linksense/react",
-        "yearly_downloads": 695
+        "yearly_downloads": 696
       },
       {
         "name": "hayagriva-llm",
@@ -62,31 +44,49 @@
         "monthly_downloads": 42,
         "weekly_downloads": 12,
         "url": "https://www.npmjs.com/package/hayagriva-llm",
-        "yearly_downloads": 1699
+        "yearly_downloads": 1705
+      },
+      {
+        "name": "@linksense/preact",
+        "version": "1.0.1",
+        "description": "Preact hooks for URL platform detection — useLinksense, useDetectAll, useNormalizeUrl, useExtractFromUrl",
+        "monthly_downloads": 34,
+        "weekly_downloads": 2,
+        "url": "https://www.npmjs.com/package/@linksense/preact",
+        "yearly_downloads": 692
+      },
+      {
+        "name": "@linksense/react",
+        "version": "1.0.1",
+        "description": "React hooks for URL platform detection — useLinkSense, useDetectAll, useNormalizeUrl, useExtractFromUrl",
+        "monthly_downloads": 26,
+        "weekly_downloads": 0,
+        "url": "https://www.npmjs.com/package/@linksense/react",
+        "yearly_downloads": 697
       },
       {
         "name": "@linksense/vue",
         "version": "1.0.1",
         "description": "Vue composables for URL platform detection — useLinkSense, useDetectAll, useNormalizeUrl, useExtractFromUrl",
-        "monthly_downloads": 41,
-        "weekly_downloads": 7,
+        "monthly_downloads": 24,
+        "weekly_downloads": 1,
         "url": "https://www.npmjs.com/package/@linksense/vue",
-        "yearly_downloads": 694
+        "yearly_downloads": 696
       },
       {
         "name": "@linksense/angular",
         "version": "1.0.1",
         "description": "Angular service for URL platform detection — LinkSenseService powered by @linksense/core",
-        "monthly_downloads": 38,
-        "weekly_downloads": 6,
+        "monthly_downloads": 23,
+        "weekly_downloads": 0,
         "url": "https://www.npmjs.com/package/@linksense/angular",
-        "yearly_downloads": 658
+        "yearly_downloads": 659
       }
     ],
     "package_count": 7,
-    "monthly_downloads": 591,
-    "weekly_downloads": 157,
-    "yearly_downloads": 8670,
+    "monthly_downloads": 511,
+    "weekly_downloads": 125,
+    "yearly_downloads": 8708,
     "top_package": {
       "name": "preact-missing-hooks",
       "version": "4.12.0",
@@ -94,7 +94,7 @@
       "monthly_downloads": 320,
       "weekly_downloads": 108,
       "url": "https://www.npmjs.com/package/preact-missing-hooks",
-      "yearly_downloads": 3539
+      "yearly_downloads": 3563
     }
   }
 }
