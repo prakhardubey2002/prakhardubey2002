@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-26T22:03:07Z",
+  "generated_at": "2026-09-27T22:23:20Z",
   "github": {
     "profile": {
       "name": "Prakhar Dubey",
@@ -26,7 +26,16 @@
         "monthly_downloads": 320,
         "weekly_downloads": 108,
         "url": "https://www.npmjs.com/package/preact-missing-hooks",
-        "yearly_downloads": 3575
+        "yearly_downloads": 3582
+      },
+      {
+        "name": "hayagriva-llm",
+        "version": "7.0.0",
+        "description": "Structured LLM metadata standard for Node.js packages — llm.package.json and llm.package.txt",
+        "monthly_downloads": 45,
+        "weekly_downloads": 13,
+        "url": "https://www.npmjs.com/package/hayagriva-llm",
+        "yearly_downloads": 1709
       },
       {
         "name": "@linksense/core",
@@ -35,16 +44,7 @@
         "monthly_downloads": 42,
         "weekly_downloads": 2,
         "url": "https://www.npmjs.com/package/@linksense/core",
-        "yearly_downloads": 707
-      },
-      {
-        "name": "hayagriva-llm",
-        "version": "7.0.0",
-        "description": "Structured LLM metadata standard for Node.js packages — llm.package.json and llm.package.txt",
-        "monthly_downloads": 42,
-        "weekly_downloads": 12,
-        "url": "https://www.npmjs.com/package/hayagriva-llm",
-        "yearly_downloads": 1707
+        "yearly_downloads": 709
       },
       {
         "name": "@linksense/preact",
@@ -84,9 +84,9 @@
       }
     ],
     "package_count": 7,
-    "monthly_downloads": 511,
-    "weekly_downloads": 125,
-    "yearly_downloads": 8739,
+    "monthly_downloads": 514,
+    "weekly_downloads": 126,
+    "yearly_downloads": 8750,
     "top_package": {
       "name": "preact-missing-hooks",
       "version": "4.12.0",
@@ -94,7 +94,7 @@
       "monthly_downloads": 320,
       "weekly_downloads": 108,
       "url": "https://www.npmjs.com/package/preact-missing-hooks",
-      "yearly_downloads": 3575
+      "yearly_downloads": 3582
     }
   }
 }
