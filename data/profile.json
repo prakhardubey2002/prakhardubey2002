@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-30T23:06:03Z",
+  "generated_at": "2026-10-01T23:16:01Z",
   "github": {
     "profile": {
       "name": "Prakhar Dubey",
@@ -9,7 +9,7 @@
       "blog": "https://linktr.ee/prakhardubey",
       "avatar_url": "https://avatars.githubusercontent.com/u/80157067?v=4"
     },
-    "repos": 124,
+    "repos": 123,
     "stars": 13,
     "followers": 34,
     "following": 60,
@@ -26,7 +26,16 @@
         "monthly_downloads": 330,
         "weekly_downloads": 153,
         "url": "https://www.npmjs.com/package/preact-missing-hooks",
-        "yearly_downloads": 3697
+        "yearly_downloads": 3701
+      },
+      {
+        "name": "@linksense/core",
+        "version": "1.2.0",
+        "description": "Framework-agnostic link/platform detection engine — detect, normalize, and extract data from 50+ platform URLs",
+        "monthly_downloads": 45,
+        "weekly_downloads": 10,
+        "url": "https://www.npmjs.com/package/@linksense/core",
+        "yearly_downloads": 730
       },
       {
         "name": "hayagriva-llm",
@@ -35,58 +44,49 @@
         "monthly_downloads": 45,
         "weekly_downloads": 13,
         "url": "https://www.npmjs.com/package/hayagriva-llm",
-        "yearly_downloads": 1724
-      },
-      {
-        "name": "@linksense/core",
-        "version": "1.1.0",
-        "description": "Framework-agnostic link/platform detection engine — detect, normalize, and extract data from 50+ platform URLs",
-        "monthly_downloads": 42,
-        "weekly_downloads": 2,
-        "url": "https://www.npmjs.com/package/@linksense/core",
-        "yearly_downloads": 719
+        "yearly_downloads": 1730
       },
       {
         "name": "@linksense/preact",
-        "version": "1.0.1",
+        "version": "1.1.0",
         "description": "Preact hooks for URL platform detection — useLinksense, useDetectAll, useNormalizeUrl, useExtractFromUrl",
-        "monthly_downloads": 34,
-        "weekly_downloads": 2,
+        "monthly_downloads": 27,
+        "weekly_downloads": 5,
         "url": "https://www.npmjs.com/package/@linksense/preact",
-        "yearly_downloads": 706
+        "yearly_downloads": 721
       },
       {
         "name": "@linksense/react",
-        "version": "1.0.1",
+        "version": "1.1.0",
         "description": "React hooks for URL platform detection — useLinkSense, useDetectAll, useNormalizeUrl, useExtractFromUrl",
-        "monthly_downloads": 26,
-        "weekly_downloads": 0,
+        "monthly_downloads": 25,
+        "weekly_downloads": 5,
         "url": "https://www.npmjs.com/package/@linksense/react",
-        "yearly_downloads": 709
+        "yearly_downloads": 717
       },
       {
         "name": "@linksense/vue",
-        "version": "1.0.1",
+        "version": "1.1.0",
         "description": "Vue composables for URL platform detection — useLinkSense, useDetectAll, useNormalizeUrl, useExtractFromUrl",
-        "monthly_downloads": 24,
-        "weekly_downloads": 1,
+        "monthly_downloads": 23,
+        "weekly_downloads": 4,
         "url": "https://www.npmjs.com/package/@linksense/vue",
-        "yearly_downloads": 706
+        "yearly_downloads": 716
       },
       {
         "name": "@linksense/angular",
-        "version": "1.0.1",
+        "version": "1.1.0",
         "description": "Angular service for URL platform detection — LinkSenseService powered by @linksense/core",
-        "monthly_downloads": 23,
-        "weekly_downloads": 0,
+        "monthly_downloads": 19,
+        "weekly_downloads": 3,
         "url": "https://www.npmjs.com/package/@linksense/angular",
-        "yearly_downloads": 672
+        "yearly_downloads": 679
       }
     ],
     "package_count": 7,
-    "monthly_downloads": 524,
-    "weekly_downloads": 171,
-    "yearly_downloads": 8933,
+    "monthly_downloads": 514,
+    "weekly_downloads": 193,
+    "yearly_downloads": 8994,
     "top_package": {
       "name": "preact-missing-hooks",
       "version": "4.12.0",
@@ -94,7 +94,7 @@
       "monthly_downloads": 330,
       "weekly_downloads": 153,
       "url": "https://www.npmjs.com/package/preact-missing-hooks",
-      "yearly_downloads": 3697
+      "yearly_downloads": 3701
     }
   }
 }
