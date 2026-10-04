@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-03T22:14:39Z",
+  "generated_at": "2026-10-04T22:23:19Z",
   "github": {
     "profile": {
       "name": "Prakhar Dubey",
@@ -26,7 +26,16 @@
         "monthly_downloads": 330,
         "weekly_downloads": 153,
         "url": "https://www.npmjs.com/package/preact-missing-hooks",
-        "yearly_downloads": 3703
+        "yearly_downloads": 3712
+      },
+      {
+        "name": "hayagriva-llm",
+        "version": "7.0.0",
+        "description": "Structured LLM metadata standard for Node.js packages — llm.package.json and llm.package.txt",
+        "monthly_downloads": 58,
+        "weekly_downloads": 17,
+        "url": "https://www.npmjs.com/package/hayagriva-llm",
+        "yearly_downloads": 1744
       },
       {
         "name": "@linksense/core",
@@ -35,16 +44,7 @@
         "monthly_downloads": 45,
         "weekly_downloads": 10,
         "url": "https://www.npmjs.com/package/@linksense/core",
-        "yearly_downloads": 921
-      },
-      {
-        "name": "hayagriva-llm",
-        "version": "7.0.0",
-        "description": "Structured LLM metadata standard for Node.js packages — llm.package.json and llm.package.txt",
-        "monthly_downloads": 45,
-        "weekly_downloads": 13,
-        "url": "https://www.npmjs.com/package/hayagriva-llm",
-        "yearly_downloads": 1734
+        "yearly_downloads": 926
       },
       {
         "name": "@linksense/preact",
@@ -53,7 +53,7 @@
         "monthly_downloads": 27,
         "weekly_downloads": 5,
         "url": "https://www.npmjs.com/package/@linksense/preact",
-        "yearly_downloads": 869
+        "yearly_downloads": 872
       },
       {
         "name": "@linksense/react",
@@ -62,7 +62,7 @@
         "monthly_downloads": 25,
         "weekly_downloads": 5,
         "url": "https://www.npmjs.com/package/@linksense/react",
-        "yearly_downloads": 875
+        "yearly_downloads": 878
       },
       {
         "name": "@linksense/vue",
@@ -71,7 +71,7 @@
         "monthly_downloads": 23,
         "weekly_downloads": 4,
         "url": "https://www.npmjs.com/package/@linksense/vue",
-        "yearly_downloads": 871
+        "yearly_downloads": 892
       },
       {
         "name": "@linksense/angular",
@@ -80,13 +80,13 @@
         "monthly_downloads": 19,
         "weekly_downloads": 3,
         "url": "https://www.npmjs.com/package/@linksense/angular",
-        "yearly_downloads": 829
+        "yearly_downloads": 847
       }
     ],
     "package_count": 7,
-    "monthly_downloads": 514,
-    "weekly_downloads": 193,
-    "yearly_downloads": 9802,
+    "monthly_downloads": 527,
+    "weekly_downloads": 197,
+    "yearly_downloads": 9871,
     "top_package": {
       "name": "preact-missing-hooks",
       "version": "4.12.0",
@@ -94,7 +94,7 @@
       "monthly_downloads": 330,
       "weekly_downloads": 153,
       "url": "https://www.npmjs.com/package/preact-missing-hooks",
-      "yearly_downloads": 3703
+      "yearly_downloads": 3712
     }
   }
 }

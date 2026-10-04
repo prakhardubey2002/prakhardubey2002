@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="1050" viewBox="0 0 900 1050" role="img" aria-labelledby="profile-title profile-description">
   <title id="profile-title">Prakhar Dubey — Software Engineer Résumé</title>
-  <desc id="profile-description">Prakhar Dubey — SDE at @RecootyInc. Based in Indore, India. He specializes in AI-driven SaaS, backend systems, micro-frontends, developer tooling, and cloud infrastructure. GitHub: 123 public repositories, 13 stars and 34 followers. npm: 7 packages and 9,802 downloads in the last year.</desc>
+  <desc id="profile-description">Prakhar Dubey — SDE at @RecootyInc. Based in Indore, India. He specializes in AI-driven SaaS, backend systems, micro-frontends, developer tooling, and cloud infrastructure. GitHub: 123 public repositories, 13 stars and 34 followers. npm: 7 packages and 9,871 downloads in the last year.</desc>
 
   <defs>
     <clipPath id="portrait-clip">
@@ -100,7 +100,7 @@
     <text x="153" y="625" class="metric-label muted">NPM PACKAGES</text>
     <text x="28" y="663" class="metric">13</text>
     <text x="28" y="676" class="metric-label muted">GITHUB STARS</text>
-    <text x="153" y="663" class="metric">9,802</text>
+    <text x="153" y="663" class="metric">9,871</text>
     <text x="153" y="676" class="metric-label muted">ANNUAL DOWNLOADS</text>
 
     <a href="https://github.com/prakhardubey2002" target="_blank">
