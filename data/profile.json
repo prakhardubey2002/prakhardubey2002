@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-06T00:53:00Z",
+  "generated_at": "2026-10-08T23:48:26Z",
   "github": {
     "profile": {
       "name": "Prakhar Dubey",
@@ -29,38 +29,20 @@
         "yearly_downloads": 3747
       },
       {
-        "name": "hayagriva-llm",
-        "version": "7.0.0",
-        "description": "Structured LLM metadata standard for Node.js packages — llm.package.json and llm.package.txt",
-        "monthly_downloads": 58,
-        "weekly_downloads": 17,
-        "url": "https://www.npmjs.com/package/hayagriva-llm",
-        "yearly_downloads": 1758
-      },
-      {
         "name": "@linksense/core",
         "version": "1.2.0",
         "description": "Framework-agnostic link/platform detection engine — detect, normalize, and extract data from 50+ platform URLs",
-        "monthly_downloads": 45,
-        "weekly_downloads": 10,
+        "monthly_downloads": 255,
+        "weekly_downloads": 223,
         "url": "https://www.npmjs.com/package/@linksense/core",
         "yearly_downloads": 954
-      },
-      {
-        "name": "@linksense/preact",
-        "version": "1.1.0",
-        "description": "Preact hooks for URL platform detection — useLinksense, useDetectAll, useNormalizeUrl, useExtractFromUrl",
-        "monthly_downloads": 27,
-        "weekly_downloads": 5,
-        "url": "https://www.npmjs.com/package/@linksense/preact",
-        "yearly_downloads": 895
       },
       {
         "name": "@linksense/react",
         "version": "1.1.0",
         "description": "React hooks for URL platform detection — useLinkSense, useDetectAll, useNormalizeUrl, useExtractFromUrl",
-        "monthly_downloads": 25,
-        "weekly_downloads": 5,
+        "monthly_downloads": 207,
+        "weekly_downloads": 186,
         "url": "https://www.npmjs.com/package/@linksense/react",
         "yearly_downloads": 897
       },
@@ -68,24 +50,42 @@
         "name": "@linksense/vue",
         "version": "1.1.0",
         "description": "Vue composables for URL platform detection — useLinkSense, useDetectAll, useNormalizeUrl, useExtractFromUrl",
-        "monthly_downloads": 23,
-        "weekly_downloads": 4,
+        "monthly_downloads": 205,
+        "weekly_downloads": 185,
         "url": "https://www.npmjs.com/package/@linksense/vue",
         "yearly_downloads": 896
+      },
+      {
+        "name": "@linksense/preact",
+        "version": "1.1.0",
+        "description": "Preact hooks for URL platform detection — useLinksense, useDetectAll, useNormalizeUrl, useExtractFromUrl",
+        "monthly_downloads": 197,
+        "weekly_downloads": 174,
+        "url": "https://www.npmjs.com/package/@linksense/preact",
+        "yearly_downloads": 895
       },
       {
         "name": "@linksense/angular",
         "version": "1.1.0",
         "description": "Angular service for URL platform detection — LinkSenseService powered by @linksense/core",
-        "monthly_downloads": 19,
-        "weekly_downloads": 3,
+        "monthly_downloads": 194,
+        "weekly_downloads": 177,
         "url": "https://www.npmjs.com/package/@linksense/angular",
         "yearly_downloads": 851
+      },
+      {
+        "name": "hayagriva-llm",
+        "version": "7.0.0",
+        "description": "Structured LLM metadata standard for Node.js packages — llm.package.json and llm.package.txt",
+        "monthly_downloads": 58,
+        "weekly_downloads": 17,
+        "url": "https://www.npmjs.com/package/hayagriva-llm",
+        "yearly_downloads": 1758
       }
     ],
     "package_count": 7,
-    "monthly_downloads": 558,
-    "weekly_downloads": 110,
+    "monthly_downloads": 1477,
+    "weekly_downloads": 1028,
     "yearly_downloads": 9998,
     "top_package": {
       "name": "preact-missing-hooks",
