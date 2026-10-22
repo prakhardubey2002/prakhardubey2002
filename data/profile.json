@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-19T22:56:26Z",
+  "generated_at": "2026-10-22T22:31:03Z",
   "github": {
     "profile": {
       "name": "Prakhar Dubey",
@@ -32,8 +32,8 @@
         "name": "@linksense/core",
         "version": "1.2.0",
         "description": "Framework-agnostic link/platform detection engine — detect, normalize, and extract data from 50+ platform URLs",
-        "monthly_downloads": 265,
-        "weekly_downloads": 17,
+        "monthly_downloads": 272,
+        "weekly_downloads": 16,
         "url": "https://www.npmjs.com/package/@linksense/core",
         "yearly_downloads": 987
       },
@@ -41,8 +41,8 @@
         "name": "@linksense/react",
         "version": "1.1.0",
         "description": "React hooks for URL platform detection — useLinkSense, useDetectAll, useNormalizeUrl, useExtractFromUrl",
-        "monthly_downloads": 211,
-        "weekly_downloads": 11,
+        "monthly_downloads": 215,
+        "weekly_downloads": 13,
         "url": "https://www.npmjs.com/package/@linksense/react",
         "yearly_downloads": 921
       },
@@ -50,28 +50,28 @@
         "name": "@linksense/vue",
         "version": "1.1.0",
         "description": "Vue composables for URL platform detection — useLinkSense, useDetectAll, useNormalizeUrl, useExtractFromUrl",
-        "monthly_downloads": 209,
-        "weekly_downloads": 11,
+        "monthly_downloads": 208,
+        "weekly_downloads": 9,
         "url": "https://www.npmjs.com/package/@linksense/vue",
         "yearly_downloads": 915
-      },
-      {
-        "name": "@linksense/preact",
-        "version": "1.1.0",
-        "description": "Preact hooks for URL platform detection — useLinksense, useDetectAll, useNormalizeUrl, useExtractFromUrl",
-        "monthly_downloads": 198,
-        "weekly_downloads": 10,
-        "url": "https://www.npmjs.com/package/@linksense/preact",
-        "yearly_downloads": 912
       },
       {
         "name": "@linksense/angular",
         "version": "1.1.0",
         "description": "Angular service for URL platform detection — LinkSenseService powered by @linksense/core",
-        "monthly_downloads": 197,
-        "weekly_downloads": 8,
+        "monthly_downloads": 202,
+        "weekly_downloads": 13,
         "url": "https://www.npmjs.com/package/@linksense/angular",
         "yearly_downloads": 872
+      },
+      {
+        "name": "@linksense/preact",
+        "version": "1.1.0",
+        "description": "Preact hooks for URL platform detection — useLinksense, useDetectAll, useNormalizeUrl, useExtractFromUrl",
+        "monthly_downloads": 197,
+        "weekly_downloads": 7,
+        "url": "https://www.npmjs.com/package/@linksense/preact",
+        "yearly_downloads": 912
       },
       {
         "name": "hayagriva-llm",
@@ -84,8 +84,8 @@
       }
     ],
     "package_count": 7,
-    "monthly_downloads": 1423,
-    "weekly_downloads": 79,
+    "monthly_downloads": 1437,
+    "weekly_downloads": 80,
     "yearly_downloads": 10139,
     "top_package": {
       "name": "preact-missing-hooks",
