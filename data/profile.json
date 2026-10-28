@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-27T23:01:38Z",
+  "generated_at": "2026-10-28T23:21:26Z",
   "github": {
     "profile": {
       "name": "Prakhar Dubey",
@@ -26,7 +26,7 @@
         "monthly_downloads": 272,
         "weekly_downloads": 16,
         "url": "https://www.npmjs.com/package/@linksense/core",
-        "yearly_downloads": 996
+        "yearly_downloads": 999
       },
       {
         "name": "@linksense/react",
@@ -35,7 +35,7 @@
         "monthly_downloads": 215,
         "weekly_downloads": 13,
         "url": "https://www.npmjs.com/package/@linksense/react",
-        "yearly_downloads": 930
+        "yearly_downloads": 931
       },
       {
         "name": "@linksense/vue",
@@ -44,7 +44,7 @@
         "monthly_downloads": 208,
         "weekly_downloads": 9,
         "url": "https://www.npmjs.com/package/@linksense/vue",
-        "yearly_downloads": 924
+        "yearly_downloads": 925
       },
       {
         "name": "@linksense/angular",
@@ -62,7 +62,7 @@
         "monthly_downloads": 197,
         "weekly_downloads": 7,
         "url": "https://www.npmjs.com/package/@linksense/preact",
-        "yearly_downloads": 926
+        "yearly_downloads": 928
       },
       {
         "name": "preact-missing-hooks",
@@ -71,7 +71,7 @@
         "monthly_downloads": 138,
         "weekly_downloads": 18,
         "url": "https://www.npmjs.com/package/preact-missing-hooks",
-        "yearly_downloads": 3768
+        "yearly_downloads": 3771
       },
       {
         "name": "hayagriva-llm",
@@ -80,13 +80,13 @@
         "monthly_downloads": 62,
         "weekly_downloads": 12,
         "url": "https://www.npmjs.com/package/hayagriva-llm",
-        "yearly_downloads": 1799
+        "yearly_downloads": 1802
       }
     ],
     "package_count": 7,
     "monthly_downloads": 1294,
     "weekly_downloads": 88,
-    "yearly_downloads": 10220,
+    "yearly_downloads": 10233,
     "top_package": {
       "name": "@linksense/core",
       "version": "1.2.0",
@@ -94,7 +94,7 @@
       "monthly_downloads": 272,
       "weekly_downloads": 16,
       "url": "https://www.npmjs.com/package/@linksense/core",
-      "yearly_downloads": 996
+      "yearly_downloads": 999
     }
   }
 }
