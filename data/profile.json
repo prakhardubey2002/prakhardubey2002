@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T22:37:20Z",
+  "generated_at": "2026-11-01T22:55:27Z",
   "github": {
     "profile": {
       "name": "Prakhar Dubey",
@@ -77,15 +77,15 @@
         "name": "hayagriva-llm",
         "version": "7.0.0",
         "description": "Structured LLM metadata standard for Node.js packages — llm.package.json and llm.package.txt",
-        "monthly_downloads": 62,
-        "weekly_downloads": 12,
+        "monthly_downloads": 86,
+        "weekly_downloads": 33,
         "url": "https://www.npmjs.com/package/hayagriva-llm",
         "yearly_downloads": 1825
       }
     ],
     "package_count": 7,
-    "monthly_downloads": 1282,
-    "weekly_downloads": 53,
+    "monthly_downloads": 1306,
+    "weekly_downloads": 74,
     "yearly_downloads": 10279,
     "top_package": {
       "name": "@linksense/core",
