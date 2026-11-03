@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T22:55:27Z",
+  "generated_at": "2026-11-03T01:41:42Z",
   "github": {
     "profile": {
       "name": "Prakhar Dubey",
@@ -26,7 +26,7 @@
         "monthly_downloads": 263,
         "weekly_downloads": 7,
         "url": "https://www.npmjs.com/package/@linksense/core",
-        "yearly_downloads": 1003
+        "yearly_downloads": 1012
       },
       {
         "name": "@linksense/react",
@@ -35,7 +35,7 @@
         "monthly_downloads": 216,
         "weekly_downloads": 6,
         "url": "https://www.npmjs.com/package/@linksense/react",
-        "yearly_downloads": 932
+        "yearly_downloads": 940
       },
       {
         "name": "@linksense/vue",
@@ -44,7 +44,7 @@
         "monthly_downloads": 208,
         "weekly_downloads": 4,
         "url": "https://www.npmjs.com/package/@linksense/vue",
-        "yearly_downloads": 929
+        "yearly_downloads": 942
       },
       {
         "name": "@linksense/angular",
@@ -53,7 +53,7 @@
         "monthly_downloads": 200,
         "weekly_downloads": 2,
         "url": "https://www.npmjs.com/package/@linksense/angular",
-        "yearly_downloads": 883
+        "yearly_downloads": 890
       },
       {
         "name": "@linksense/preact",
@@ -62,16 +62,7 @@
         "monthly_downloads": 195,
         "weekly_downloads": 4,
         "url": "https://www.npmjs.com/package/@linksense/preact",
-        "yearly_downloads": 932
-      },
-      {
-        "name": "preact-missing-hooks",
-        "version": "4.12.0",
-        "description": "A lightweight, extendable collection of missing React-like hooks for Preact — plus fresh, powerful new ones designed specifically for modern Preact apps.",
-        "monthly_downloads": 138,
-        "weekly_downloads": 18,
-        "url": "https://www.npmjs.com/package/preact-missing-hooks",
-        "yearly_downloads": 3775
+        "yearly_downloads": 946
       },
       {
         "name": "hayagriva-llm",
@@ -80,13 +71,22 @@
         "monthly_downloads": 86,
         "weekly_downloads": 33,
         "url": "https://www.npmjs.com/package/hayagriva-llm",
-        "yearly_downloads": 1825
+        "yearly_downloads": 1851
+      },
+      {
+        "name": "preact-missing-hooks",
+        "version": "4.12.0",
+        "description": "A lightweight, extendable collection of missing React-like hooks for Preact — plus fresh, powerful new ones designed specifically for modern Preact apps.",
+        "monthly_downloads": 77,
+        "weekly_downloads": 21,
+        "url": "https://www.npmjs.com/package/preact-missing-hooks",
+        "yearly_downloads": 3780
       }
     ],
     "package_count": 7,
-    "monthly_downloads": 1306,
-    "weekly_downloads": 74,
-    "yearly_downloads": 10279,
+    "monthly_downloads": 1245,
+    "weekly_downloads": 77,
+    "yearly_downloads": 10361,
     "top_package": {
       "name": "@linksense/core",
       "version": "1.2.0",
@@ -94,7 +94,7 @@
       "monthly_downloads": 263,
       "weekly_downloads": 7,
       "url": "https://www.npmjs.com/package/@linksense/core",
-      "yearly_downloads": 1003
+      "yearly_downloads": 1012
     }
   }
 }
