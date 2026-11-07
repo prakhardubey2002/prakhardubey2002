@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-06T00:26:42Z",
+  "generated_at": "2026-11-07T22:50:14Z",
   "github": {
     "profile": {
       "name": "Prakhar Dubey",
@@ -26,7 +26,7 @@
         "monthly_downloads": 86,
         "weekly_downloads": 33,
         "url": "https://www.npmjs.com/package/hayagriva-llm",
-        "yearly_downloads": 1875
+        "yearly_downloads": 1878
       },
       {
         "name": "preact-missing-hooks",
@@ -35,7 +35,7 @@
         "monthly_downloads": 77,
         "weekly_downloads": 21,
         "url": "https://www.npmjs.com/package/preact-missing-hooks",
-        "yearly_downloads": 4079
+        "yearly_downloads": 4097
       },
       {
         "name": "@linksense/core",
@@ -44,7 +44,7 @@
         "monthly_downloads": 53,
         "weekly_downloads": 13,
         "url": "https://www.npmjs.com/package/@linksense/core",
-        "yearly_downloads": 1178
+        "yearly_downloads": 1183
       },
       {
         "name": "@linksense/preact",
@@ -53,7 +53,7 @@
         "monthly_downloads": 39,
         "weekly_downloads": 11,
         "url": "https://www.npmjs.com/package/@linksense/preact",
-        "yearly_downloads": 1067
+        "yearly_downloads": 1072
       },
       {
         "name": "@linksense/react",
@@ -62,7 +62,7 @@
         "monthly_downloads": 39,
         "weekly_downloads": 9,
         "url": "https://www.npmjs.com/package/@linksense/react",
-        "yearly_downloads": 1068
+        "yearly_downloads": 1074
       },
       {
         "name": "@linksense/vue",
@@ -71,7 +71,7 @@
         "monthly_downloads": 39,
         "weekly_downloads": 13,
         "url": "https://www.npmjs.com/package/@linksense/vue",
-        "yearly_downloads": 1073
+        "yearly_downloads": 1078
       },
       {
         "name": "@linksense/angular",
@@ -80,13 +80,13 @@
         "monthly_downloads": 36,
         "weekly_downloads": 13,
         "url": "https://www.npmjs.com/package/@linksense/angular",
-        "yearly_downloads": 1011
+        "yearly_downloads": 1016
       }
     ],
     "package_count": 7,
     "monthly_downloads": 369,
     "weekly_downloads": 113,
-    "yearly_downloads": 11351,
+    "yearly_downloads": 11398,
     "top_package": {
       "name": "hayagriva-llm",
       "version": "7.0.0",
@@ -94,7 +94,7 @@
       "monthly_downloads": 86,
       "weekly_downloads": 33,
       "url": "https://www.npmjs.com/package/hayagriva-llm",
-      "yearly_downloads": 1875
+      "yearly_downloads": 1878
     }
   }
 }
