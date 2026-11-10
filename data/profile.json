@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T22:58:24Z",
+  "generated_at": "2026-11-10T02:17:53Z",
   "github": {
     "profile": {
       "name": "Prakhar Dubey",
@@ -20,22 +20,22 @@
     "profile_url": "https://www.npmjs.com/~prakhar_dubey",
     "packages": [
       {
+        "name": "preact-missing-hooks",
+        "version": "4.12.0",
+        "description": "A lightweight, extendable collection of missing React-like hooks for Preact — plus fresh, powerful new ones designed specifically for modern Preact apps.",
+        "monthly_downloads": 222,
+        "weekly_downloads": 160,
+        "url": "https://www.npmjs.com/package/preact-missing-hooks",
+        "yearly_downloads": 4153
+      },
+      {
         "name": "hayagriva-llm",
         "version": "7.0.0",
         "description": "Structured LLM metadata standard for Node.js packages — llm.package.json and llm.package.txt",
         "monthly_downloads": 107,
         "weekly_downloads": 40,
         "url": "https://www.npmjs.com/package/hayagriva-llm",
-        "yearly_downloads": 1889
-      },
-      {
-        "name": "preact-missing-hooks",
-        "version": "4.12.0",
-        "description": "A lightweight, extendable collection of missing React-like hooks for Preact — plus fresh, powerful new ones designed specifically for modern Preact apps.",
-        "monthly_downloads": 77,
-        "weekly_downloads": 21,
-        "url": "https://www.npmjs.com/package/preact-missing-hooks",
-        "yearly_downloads": 4100
+        "yearly_downloads": 1901
       },
       {
         "name": "@linksense/core",
@@ -53,7 +53,7 @@
         "monthly_downloads": 39,
         "weekly_downloads": 11,
         "url": "https://www.npmjs.com/package/@linksense/preact",
-        "yearly_downloads": 1072
+        "yearly_downloads": 1077
       },
       {
         "name": "@linksense/react",
@@ -80,21 +80,21 @@
         "monthly_downloads": 36,
         "weekly_downloads": 13,
         "url": "https://www.npmjs.com/package/@linksense/angular",
-        "yearly_downloads": 1016
+        "yearly_downloads": 1017
       }
     ],
     "package_count": 7,
-    "monthly_downloads": 390,
-    "weekly_downloads": 120,
-    "yearly_downloads": 11412,
+    "monthly_downloads": 535,
+    "weekly_downloads": 259,
+    "yearly_downloads": 11483,
     "top_package": {
-      "name": "hayagriva-llm",
-      "version": "7.0.0",
-      "description": "Structured LLM metadata standard for Node.js packages — llm.package.json and llm.package.txt",
-      "monthly_downloads": 107,
-      "weekly_downloads": 40,
-      "url": "https://www.npmjs.com/package/hayagriva-llm",
-      "yearly_downloads": 1889
+      "name": "preact-missing-hooks",
+      "version": "4.12.0",
+      "description": "A lightweight, extendable collection of missing React-like hooks for Preact — plus fresh, powerful new ones designed specifically for modern Preact apps.",
+      "monthly_downloads": 222,
+      "weekly_downloads": 160,
+      "url": "https://www.npmjs.com/package/preact-missing-hooks",
+      "yearly_downloads": 4153
     }
   }
 }
