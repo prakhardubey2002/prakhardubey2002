@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T00:35:05Z",
+  "generated_at": "2026-11-14T00:23:26Z",
   "github": {
     "profile": {
       "name": "Prakhar Dubey",
@@ -26,7 +26,7 @@
         "monthly_downloads": 222,
         "weekly_downloads": 160,
         "url": "https://www.npmjs.com/package/preact-missing-hooks",
-        "yearly_downloads": 4172
+        "yearly_downloads": 4173
       },
       {
         "name": "hayagriva-llm",
@@ -35,7 +35,7 @@
         "monthly_downloads": 107,
         "weekly_downloads": 40,
         "url": "https://www.npmjs.com/package/hayagriva-llm",
-        "yearly_downloads": 1920
+        "yearly_downloads": 1924
       },
       {
         "name": "@linksense/core",
@@ -80,13 +80,13 @@
         "monthly_downloads": 34,
         "weekly_downloads": 3,
         "url": "https://www.npmjs.com/package/@linksense/vue",
-        "yearly_downloads": 1078
+        "yearly_downloads": 1079
       }
     ],
     "package_count": 7,
     "monthly_downloads": 519,
     "weekly_downloads": 223,
-    "yearly_downloads": 11528,
+    "yearly_downloads": 11534,
     "top_package": {
       "name": "preact-missing-hooks",
       "version": "4.12.0",
@@ -94,7 +94,7 @@
       "monthly_downloads": 222,
       "weekly_downloads": 160,
       "url": "https://www.npmjs.com/package/preact-missing-hooks",
-      "yearly_downloads": 4172
+      "yearly_downloads": 4173
     }
   }
 }
