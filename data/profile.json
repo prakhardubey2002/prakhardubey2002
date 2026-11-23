@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T23:50:59Z",
+  "generated_at": "2026-11-23T00:23:01Z",
   "github": {
     "profile": {
       "name": "Prakhar Dubey",
@@ -26,16 +26,16 @@
         "monthly_downloads": 263,
         "weekly_downloads": 64,
         "url": "https://www.npmjs.com/package/preact-missing-hooks",
-        "yearly_downloads": 4437
+        "yearly_downloads": 4443
       },
       {
         "name": "hayagriva-llm",
         "version": "7.0.0",
         "description": "Structured LLM metadata standard for Node.js packages — llm.package.json and llm.package.txt",
-        "monthly_downloads": 145,
-        "weekly_downloads": 37,
+        "monthly_downloads": 158,
+        "weekly_downloads": 33,
         "url": "https://www.npmjs.com/package/hayagriva-llm",
-        "yearly_downloads": 1962
+        "yearly_downloads": 1967
       },
       {
         "name": "@linksense/core",
@@ -71,7 +71,7 @@
         "monthly_downloads": 24,
         "weekly_downloads": 4,
         "url": "https://www.npmjs.com/package/@linksense/vue",
-        "yearly_downloads": 1093
+        "yearly_downloads": 1094
       },
       {
         "name": "@linksense/react",
@@ -84,9 +84,9 @@
       }
     ],
     "package_count": 7,
-    "monthly_downloads": 537,
-    "weekly_downloads": 121,
-    "yearly_downloads": 11902,
+    "monthly_downloads": 550,
+    "weekly_downloads": 117,
+    "yearly_downloads": 11914,
     "top_package": {
       "name": "preact-missing-hooks",
       "version": "4.12.0",
@@ -94,7 +94,7 @@
       "monthly_downloads": 263,
       "weekly_downloads": 64,
       "url": "https://www.npmjs.com/package/preact-missing-hooks",
-      "yearly_downloads": 4437
+      "yearly_downloads": 4443
     }
   }
 }
